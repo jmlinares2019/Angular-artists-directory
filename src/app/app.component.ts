@@ -9,9 +9,13 @@ export class AppComponent {
   query: string;
   artists: object;
 
+  showArtist(item){
+    this.query = item.name; 
+  }
+
   constructor(){
-    // instantiate the variables (give'em a initial value)
-    this.query = 'Barot';
+    // instantiate the variables (give'em an initial value)
+    this.query = '';
     this.artists = [
       {
         "name":"Barot Bellingham",
