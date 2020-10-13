@@ -5,8 +5,8 @@
         <h3 clss="mb-0">Artist Directory</h3>
         <div class="form-group">
           <div class="form-label" 
-          *ngIf="query"><!--if 'query' is true (exists / has a value) -->
-            <strong>For: {{ query }}</strong></div>
+          *ngIf="selected"><!--if 'selected' is true (exists / has a value) -->
+            <strong>For: {{ selected }}</strong></div>
           <input class="form-control mt-2" type="text">
         </div><!-- form group-->
       </div><!--card-body-->
@@ -19,8 +19,13 @@
         <div class="list-group">
           <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" 
           *ngFor="let artist of artists"
-          (click)="showArtist(artist)">
+          (click)="showArtist(artist)"
+          [style.backgroundColor]="artist.highlight ? '#EEE' : '#FFF'"
+          [style.classList.add]="artist.highlight ? 'focused' : ''"><!-- este último no funciona (?)-->
               <div class="media">
+                <img class="artist-pic mr-3 rounded align-self-center img-fluid" 
+                [src]=" './assets/images/' + artist.shortname + '_tn.jpg' "
+                [alt]=" 'Photo of ' + artist.name "> 
                 <div class="media-body align-self-center">
                   <h5 class="m-0">{{ artist.name }}</h5>
                   <p>{{ artist.reknown }}</p>
