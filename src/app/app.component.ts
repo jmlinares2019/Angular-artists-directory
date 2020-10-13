@@ -6,16 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  query: string;
+  selected: string;
   artists: object;
 
   showArtist(item){
-    this.query = item.name; 
+    this.selected = item.name;
+    // toggle btw highlight and no highlight
+    item.highlight = !item.highlight;
   }
 
   constructor(){
     // instantiate the variables (give'em an initial value)
-    this.query = '';
+    this.selected = '';
     this.artists = [
       {
         "name":"Barot Bellingham",
