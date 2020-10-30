@@ -23,15 +23,7 @@
           (click)="showArtist(artist)"
           [style.backgroundColor]="artist.highlight ? '#EEE' : '#FFF'"
           [style.classList.add]="artist.highlight ? 'focused' : ''"><!-- este último no funciona (cómo se haría?)-->
-              <div class="media">
-                <img class="artist-pic mr-3 rounded align-self-center img-fluid" 
-                [src]=" './assets/images/' + artist.shortname + '_tn.jpg' "
-                [alt]=" 'Photo of ' + artist.name "> 
-                <div class="media-body align-self-center">
-                  <h5 class="m-0">{{ artist.name }}</h5>
-                  <p>{{ artist.reknown }}</p>
-                </div><!-- media body -->
-              </div><!-- media -->
+          <app-artist-items [artist]="artist"></app-artist-items>
           </a><!-- link -->
         </div><!-- list-group -->
       </div><!-- col -->
