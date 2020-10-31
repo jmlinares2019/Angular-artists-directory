@@ -7,18 +7,18 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  selected: string;
+  query: string;
   artists: object;
 
   showArtist(item){
-    this.selected = item.name;
+    this.query = item.name;
     // toggle btw highlight and no highlight
     item.highlight = !item.highlight;
   }
 
   constructor( private http: HttpClient ){
     // instantiate the variables (give'em an initial value)
-    this.selected = '';
+    this.query = '';
     // this.artists = []; --> we no longer need this initialization
   }
 
