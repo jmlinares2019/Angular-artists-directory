@@ -19,10 +19,11 @@
       <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5">
         <div class="list-group">
           <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" 
-          *ngFor="let artist of artists"
+          *ngFor="let artist of (artists | searchArtists: selected)"
           (click)="showArtist(artist)"
           [style.backgroundColor]="artist.highlight ? '#EEE' : '#FFF'"
           [style.classList.add]="artist.highlight ? 'focused' : ''"><!-- este último no funciona (cómo se haría?)-->
+          <!-- en la linea 22: ' | ' sirve para poner después el pipe (filtro) creado en search-artist.pipe.ts   -->
           <app-artist-items [artist]="artist"></app-artist-items>
           </a><!-- link -->
         </div><!-- list-group -->
