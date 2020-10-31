@@ -10,7 +10,7 @@ export class SearchArtistsPipe implements PipeTransform {
       return (
         eachItem['name'].toLowerCase().includes(pipeModifier.toLowerCase())
         // los elementos del array (eachItem) cuyo 'name' (en minúsculas) 
-        // que incluyan el término de búsqueda (pipeModifier, también en minúsculas) 
+        // incluyan el término de búsqueda (pipeModifier, también en minúsculas) 
         )
     });
   }
