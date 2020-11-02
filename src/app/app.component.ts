@@ -7,11 +7,16 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  // create vars
   query: string;
   artists: object;
+  currentArtist: object;
 
   showArtist(item){
+    // assign to (this = this component) var 'query' the value of item's (artist's) 'name', passed through the (click) event
     this.query = item.name;
+    // assign to var 'currentArtist' the value of item (the entire object 'artist'), passed through the (click) event
+    this.currentArtist = item;
     // toggle btw highlight and no highlight
     item.highlight = !item.highlight;
   }
