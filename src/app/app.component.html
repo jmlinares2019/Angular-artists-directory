@@ -21,7 +21,9 @@
         *ngIf="query">
           <a href="#" class="list-group-item list-group-item-action flex-column align-items-start" 
           *ngFor="let artist of (artists | searchArtists: query)"
-          (click)="showArtist(artist); query=''"
+          (click)="showArtist(artist); query='';"
+          (mouseenter)="hoverArtist(artist);"
+          (mouseleave)="hoverArtist(artist);" 
           [style.backgroundColor]="artist.highlight ? '#EEE' : '#FFF'"
           >
           <!-- en la linea 22: ' | ' sirve para poner después el pipe (filtro) creado en search-artist.pipe.ts   -->

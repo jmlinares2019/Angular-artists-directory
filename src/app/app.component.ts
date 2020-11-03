@@ -21,6 +21,11 @@ export class AppComponent implements OnInit {
     item.highlight = !item.highlight;
   }
 
+  hoverArtist(item){
+    // toggle btw highlight and no highlight
+    item.highlight = !item.highlight;
+  }
+
   constructor( private http: HttpClient ){
     // instantiate the variables (give'em an initial value)
     this.query = '';
