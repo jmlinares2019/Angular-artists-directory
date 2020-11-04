@@ -1,0 +1,10 @@
+.app-artist-detail-container{
+    padding: 0 !important;
+}
+
+.artist-detail-card{
+    margin: auto;
+    padding: 1rem;
+    border: 1px solid rgba(0,0,0,0.125);
+    background-color: #fff;
+}
