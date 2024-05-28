@@ -2,13 +2,24 @@
   <div class="row justify-content-center">
     <div class="card mt-3 col-md-12 col-lg-8">
       <div class="card-body">
-        <h3 clss="mb-0">Artist Directory</h3>
+        <nav class="nav-menu">
+          <a href="/" class="home-link">
+            <h3 clss="mb-0">Artist Directory<span class="by-signature"> | by Juan Manuel Linares</span></h3>
+          </a>
+          <a href="https://github.com/jmlinares2019/Angular-artists-directory" target="_blank" class="gh-link">
+            <i class="bi bi-github"></i>
+          </a>
+        </nav>
         <div class="form-group">
           <div class="form-label" 
-          *ngIf="query"><!--if 'query' is true (exists / has a value) -->
-            <strong>For: {{ query }}</strong></div>
-          <input class="form-control mt-2" type="text"
-          [(ngModel)]="query">
+              *ngIf="query"><!--if 'query' is true (exists / has a value) -->
+              <strong>For: {{ query }}</strong>
+          </div>
+          <input
+              type="text"
+              placeholder="Start typing to see results" 
+              class="form-control mt-2"    
+              [(ngModel)]="query">
         </div><!-- form group-->
       </div><!--card-body-->
     </div><!-- card-->
@@ -35,8 +46,8 @@
   </div><!-- container -->
 
   <app-artist-detail 
-  *ngIf="currentArtist"
-  [currentArtist]="currentArtist">
+    *ngIf="currentArtist"
+    [currentArtist]="currentArtist">
   </app-artist-detail>
 
 

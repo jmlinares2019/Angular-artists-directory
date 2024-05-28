@@ -1,4 +1,22 @@
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
 
+.home-link{
+    color: inherit;
+    text-decoration: none;
+}
+
+.by-signature{
+    font-size: 1rem;
+    color: lightblue;
+}
+
+.gh-link{
+    color: inherit;
+}
 
 .artist-pic{
     width: 70px;
